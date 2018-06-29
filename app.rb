@@ -3,7 +3,7 @@ require_relative 'models/ecobotAnswers.rb'
 
 class App < Sinatra::Base
   get '/' do
-    erb :final
+    erb :ecogen
   end
 
   get '/ecobot' do
@@ -14,6 +14,14 @@ class App < Sinatra::Base
     main_string = params["string"]
     @primary_string = main_string
     erb :technology
+  end
+
+  get '/aboutpage' do
+    erb :aboutpage
+  end
+
+  get '/ecobotresources' do
+    erb :ecobotresources
   end
 
   post '/results' do
