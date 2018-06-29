@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'models/ecobotAnswers.rb'
 
 class App < Sinatra::Base
   get '/' do
@@ -16,6 +17,9 @@ class App < Sinatra::Base
   end
 
   post '/results' do
-    params
+    @answer = params[doingNow]
+    @finalAnswer = giveTechAnswer(@answer)
+
+    erb :results
   end
 end
