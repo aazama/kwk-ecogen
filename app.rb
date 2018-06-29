@@ -16,6 +16,14 @@ class App < Sinatra::Base
     erb :technology
   end
 
+  get '/aboutpage' do
+    erb :aboutpage
+  end
+
+  get '/ecobotresources' do
+    erb :ecobotresources
+  end
+
   post '/results' do
     @answer = params[:doingNow]
     @finalAnswer = giveTechAnswer(@answer)
