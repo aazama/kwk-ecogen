@@ -17,7 +17,7 @@ class App < Sinatra::Base
   end
 
   post '/results' do
-    @answer = params[doingNow]
+    @answer = params[:doingNow]
     @finalAnswer = giveTechAnswer(@answer)
 
     erb :results
