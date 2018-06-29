@@ -1,18 +1,21 @@
-require_relative 'config/environment'
+require 'sinatra'
 
 class App < Sinatra::Base
-  get '/reverse' do
-    erb :reverse
+  get '/' do
+    erb :final
   end
 
-  post '/reverse' do
-    original_string = params["string"]
-    @reversed_string = original_string.reverse
-    erb :reversed
+  get '/ecobot' do
+    erb :ecobot
   end
 
-  get '/friends' do
-    # Write your code here!
+  get '/technology' do
+    main_string = params["string"]
+    @primary_string = main_string
+    erb :technology
+  end
 
+  post '/results' do
+    params
   end
 end

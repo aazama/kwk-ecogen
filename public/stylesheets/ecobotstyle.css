@@ -5,14 +5,15 @@ header {color: #000080;
         font-family: "Rajdhani";
         text-align;
         font-size:300%;}
+ecobot {color:#000080;
+      font-family: "Comfortaa";
+      font-size:100%}
 
-body {color: #484349;
+body {color: #484349; 
       font-family: "Comfortaa";
       font-size:100%;
       background-color:#F7F0F0;
-      line-height: 2.0;}
+      line-height: 2.0}
 
-img {height: 800px;
-  width: 90%}
-
-footer {font-size:90%}
+footer {font-size:90%;
+  color:light-grey;}
