@@ -20,7 +20,7 @@ class App < Sinatra::Base
     erb :aboutpage
   end
 
-  get '/ecobotresources' do
+  get '/resources' do
     erb :ecobotresources
   end
 
