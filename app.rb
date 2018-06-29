@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'models/ecobotAnswers.rb'
+require_relative 'models/ecogov.rb'
 
 class App < Sinatra::Base
   get '/' do
@@ -18,6 +19,18 @@ class App < Sinatra::Base
 
   get '/aboutpage' do
     erb :aboutpage
+  end
+
+  get '/ecogov' do
+    erb :ecogov
+  end
+
+
+  post '/govresults' do
+    answers = params[:state]
+    @user_value = answers.to_s
+    @senators = your_senators(@user_value)
+    erb :senators
   end
 
   get '/resources' do
